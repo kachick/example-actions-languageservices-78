@@ -1,6 +1,6 @@
-# anylang-template
+# example-actions-languageservices-78
 
-[![CI - Nix Status](https://github.com/kachick/anylang-template/actions/workflows/ci-nix.yml/badge.svg?branch=main)](https://github.com/kachick/anylang-template/actions/workflows/ci-nix.yml?query=branch%3Amain+)
+[![Dump](https://github.com/kachick/example-actions-languageservices-78/actions/workflows/dump.yml/badge.svg?branch=main)](https://github.com/kachick/example-actions-languageservices-78/actions/workflows/dump.yml)
 
-A template that is not exclusive to one programming language.\
-Basic setup for editor, documents and GitHub Actions.
+- <https://github.com/actions/languageservices/issues/78>
+- <https://github.com/actions/languageservices/pull/79>

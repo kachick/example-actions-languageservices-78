@@ -1,0 +1,27 @@
+name: Dump
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  plain:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: |
+          echo "$RUNNER_CONTEXT"
+  debug:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Dump runner context
+        env:
+          ACTIONS_RUNNER_DEBUG: true
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: |
+          echo "$RUNNER_CONTEXT"
