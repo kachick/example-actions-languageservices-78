@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Dump runner context
         env:
-          # "ACTIONS_RUNNER_DEBUG" should be set in repository secret or variable. Not here
+          # 1. "ACTIONS_RUNNER_DEBUG" should be set in repository secret or variable. Not here
+          # 2. Re-run with debug mode. In no debug mode, the environment variable will not be appeared
           RUNNER_CONTEXT: ${{ toJson(runner) }}
         run: |
           echo "$RUNNER_CONTEXT"
