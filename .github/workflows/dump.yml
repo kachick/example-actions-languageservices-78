@@ -12,16 +12,7 @@ jobs:
     steps:
       - name: Dump runner context
         env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: |
-          echo "$RUNNER_CONTEXT"
-  debug:
-    timeout-minutes: 15
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Dump runner context
-        env:
-          ACTIONS_RUNNER_DEBUG: true
+          # "ACTIONS_RUNNER_DEBUG" should be set in repository secret or variable. Not here
           RUNNER_CONTEXT: ${{ toJson(runner) }}
         run: |
           echo "$RUNNER_CONTEXT"
